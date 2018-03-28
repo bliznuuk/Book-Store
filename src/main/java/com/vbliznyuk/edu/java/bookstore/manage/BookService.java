@@ -13,7 +13,7 @@ public class BookService {
 		book.setPrice(price);
 		book.setDescription(description);
 		
-		book.setNumber((""+Math.random()));
+		book.setNumber((""+Math.random()).substring(2, 13));
 		
 		return book;
 	}
