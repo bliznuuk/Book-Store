@@ -10,7 +10,7 @@ public class Main {
 		BookService bs = new BookService();
 		Book book = bs.createBook("cdi practice", 99.99, "master your knowledge");
 		
-		System.out.println(book.getNumber());
+		System.out.println(book);
 	}
 
 }

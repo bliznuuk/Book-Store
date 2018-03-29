@@ -65,5 +65,15 @@ public class Book {
 		this.number = number;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder result = new StringBuilder();
+		result.append("Book: ").append(title).append("\n");
+		result.append("Number: ").append(number).append("\n");
+		result.append("Price: ").append(price).append("\n");
+		result.append("Description: ").append(description).append("\n");
+	
+		return result.toString();
+	}
 	
 }
