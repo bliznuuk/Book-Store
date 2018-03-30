@@ -1,7 +1,7 @@
 package com.vbliznyuk.edu.java.bookstore;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,16 +12,17 @@ import com.vbliznyuk.edu.java.bookstore.manage.BookService;
 public class BookServiceTest {
 
 	private BookService bookService;
-	private Book testBook = bookService.createBook("test", 999, "test");
+	private Book testBook;
 	
 	@Before
 	public void setUp() {
 		bookService = new BookService();
+		testBook = bookService.createBook("test", 999, "test");
 	}
 
 	@Test
 	public void bookShouldBeCreated(){
-		assertNull("BookService haven't created Book object", testBook);
+		assertNotNull("BookService haven't created Book object", testBook);
 	}
 	
 	@Test
