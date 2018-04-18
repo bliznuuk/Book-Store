@@ -14,16 +14,11 @@ import com.vbliznyuk.edu.java.bookstore.manage.BookService;
 @Singleton
 public class Main {
 
-/*	public static void main(String[] args) {
-		
+	public void entryPoint(@Observes ContainerInitialized initEvent, @Parameters List<String> parameters) {
 		BookService bs = new BookService();
 		Book book = bs.createBook("cdi practice", 99.99, "master your knowledge");
 		
 		System.out.println(book);
-	}
-*/
-	public void Hello(@Observes ContainerInitialized initEvent, @Parameters List<String> parameters) {
-		System.out.println("Hello from weld!");
 	}
 	
 }
