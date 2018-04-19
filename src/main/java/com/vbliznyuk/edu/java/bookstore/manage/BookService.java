@@ -4,7 +4,10 @@ import com.vbliznyuk.edu.java.bookstore.book.Book;
 
 public class BookService {
 	
+	NumberGenerator numberGenerator;
+	
 	public BookService() {
+		numberGenerator = new IssnGenerator();
 	}
 	
 	public Book createBook(String title, double price, String description) {
@@ -13,7 +16,7 @@ public class BookService {
 		book.setPrice(price);
 		book.setDescription(description);
 		
-		book.setNumber((""+Math.random()).substring(2, 13));
+		book.setNumber(numberGenerator.generateNumber());
 		
 		return book;
 	}
